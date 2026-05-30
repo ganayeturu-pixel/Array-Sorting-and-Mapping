@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2 {
+            color: #333;
+            font-weight: bold;
+
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #007BFF;
+            color: white;
+            border: solid red 2px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Array <em>Sorting</em></h2>
+    <ul>
+        <li>Sorting an array is a common task in programming.<br> There are various algorithms to sort an array, such as:</li>
+    </ul>
+<hr>
+    <button onclick="ascending()"> Ascending Order </button>
+    <button onclick="descending()"> Descending Order </button>
+    <p id="result"></p>
+    <script>
+        var points = [5, 2, 9, 1, 5, 6];
+         document.getElementById("result").innerHTML = points;
+
+        function ascending() {
+            points.sort(function(a, b){return a - b});
+            document.getElementById("result").innerHTML = points;
+        }
+
+        function descending() {
+            points.sort(function(a, b){return b - a});
+            document.getElementById("result").innerHTML = points;
+        }
+    </script>
+</body>
+</html>
